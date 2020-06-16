@@ -1,13 +1,15 @@
 import requests
+from defusedxml import lxml
 from lxml import html
 from collections import defaultdict
-
+from lxml import etree
+import xml.etree.ElementTree as ET
 
 def get_stocks(url):
     # Make Request
     page = requests.get(url)
     # Parse/Scrape
-    tree = html.fromstring(page.text)
+    tree = lxml.html.fromstring(page.text)
     xpath = '//*[@id="mw-content-text"]/table[1]'
     rows = tree.xpath(xpath)[0].findall("tr")
     rows = [(row.getchildren()[0], row.getchildren()[3]) for row in rows[1:]]

@@ -11,6 +11,7 @@ do
   # extension="${f##*.}"
   filename="${f%.*}"
   echo "Converting $f to $filename.md"
+  # shellcheck disable=SC2092
   `pandoc $f -t markdown -o ../mds/$filename.md`
   # uncomment this line to delete the source file.
   # rm $f

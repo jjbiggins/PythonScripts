@@ -1,12 +1,13 @@
 import twitter
+from distlib.compat import raw_input
 
 
-TWITTER_CONSUMER_KEY = 'XXX'
-TWITTER_CONSUMER_SECRET = 'XXX'
-TWITTER_ACCESS_TOKEN_KEY = 'XXX'
-TWITTER_ACCESS_TOKEN_SECRET = 'XXX'
+TWITTER_CONSUMER_KEY = 'quI4EXqGt0qvBAuDl4q0ripBm'
+TWITTER_CONSUMER_SECRET = 'krTlB3yad0h43cLd4NoRAoNkFV7zmiim6TKCgp8DNElMUNSuKy'
+TWITTER_ACCESS_TOKEN_KEY = '419716095-fxSL9wPlcwcsHij2z1FG4j3bml9b9vlNSobbJACY'
+TWITTER_ACCESS_TOKEN_SECRET = 'fOfl8gbBKF8MmSFLumHXDHMmRWQ3pLDkfnRkTMHgWRM6e'
 
-twitter_api = twitter.Api(
+twitter_api = twitter.api(
     consumer_key=TWITTER_CONSUMER_KEY,
     consumer_secret=TWITTER_CONSUMER_SECRET,
     access_token_key=TWITTER_ACCESS_TOKEN_KEY,
